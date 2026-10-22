@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+""" This is a dummy comment to add some data to the original disk_usage.py
+"""
+
 import shutil
 import sys
 

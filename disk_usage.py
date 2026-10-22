@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-
-""" This is a dummy comment to add some data to the original disk_usage.py
-"""
-
 import shutil
 import sys
 
@@ -14,7 +10,7 @@ def check_disk_usage(disk, min_gb, min_percent):
     # Calculate how many free gigabytes
     gigabytes_free = du.free / 2**30
     print(f"DEBUG: free {gigabytes_free}GB.")
-    if percent_free < min_percent or gigabytes_free < min_gb:
+    if gigabytes_free < min_gb or percent_free < min_percent:
         return False
     return True
 
@@ -26,3 +22,4 @@ if not check_disk_usage(disk="/", min_gb=2, min_percent=10):
 print("Everything ok.")
 sys.exit(0)
 
+""" This is a dummy comment to add some data to the original disk_usage.py """;
